@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+</head>
+<body>
+    <h2>My Contact Details</h2>
+    <h3>South of Bazar Samiti Panchwati Nagar, Patna - 16</h3>
+    <p><a href="mailto:hazardrousgamer26012003@gmail.com">Email</a></p>
+    <p><a href="tel:+917633077227">Phone</a></p>
+
+    <form action="mailto:hazardrousgamer26012003@gmail.com" method="post" enctype="text/plain">
+        <label for="rname">Your Name :</label>
+        <input type="text" name="rname"><br>
+        <label for="pass">Enter your Password :</label>
+        <input type="password" name="pass"><br>
+        <label for="remail">Enter your email :</label>
+        <input type="email" name="rpass"><br>
+        <label for="col">Choose your Favourite Color :</label>
+        <input type="color" name="col"><br>
+        <label for="course">Choose the Course :</label>
+        <input type="checkbox" name="course">Web Developement
+        <input type="checkbox" name="course">DSA<br>
+        <label for="datepick">Choose your DOB :</label>
+        <input type="date" name="datepick"><br>
+        <label for="filepick">Choose a File :</label>
+        <input type="file" name="filepick"><br>
+        <label for="rangepick">Choose the Range of Urgency :</label>
+        <input type="range" name="rangepick"><br>
+        <label for="rangepick">Choose your Degree :</label>
+        <select name="degree" id="degree-select">
+            <option value="">--Please Choose an Option :</option>
+            <option value="btech">B.Tech</option>
+            <option value="mtech">M.Tech</option>
+        </select><br>
+        <label for="message">Type your Message :</label><br>
+        <textarea name="message" cols="100" rows="5">Type the Message Here</textarea><br>
+        <fieldset>
+            <legend>Do you want to Submit</legend>
+            <label><input type="radio" name="consent">Yes</label>
+            <label><input type="radio" name="consent">No</label>
+        </fieldset>
+        <input type="submit">
+    </form>
+</body>
+</html>
