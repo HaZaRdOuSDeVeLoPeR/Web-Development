@@ -1,0 +1,18 @@
+h1{
+    color:#80BF0F;
+}
+h2{
+    color:#10D2FF;
+}
+h3{
+    color: #56BF67;
+}
+img{
+    margin:5px;
+    padding:0px;
+}
+img:hover{
+    margin:0px;
+    padding:5px;
+    background-color: gold;
+}

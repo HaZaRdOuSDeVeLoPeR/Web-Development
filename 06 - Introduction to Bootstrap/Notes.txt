@@ -1,0 +1,8 @@
+// Bootstrap can be seen as a library of front-end web designs.
+
+// Wireframing is low-fidelity representation/design of a website before starting to implement any website.
+--> Use balsamiq.cloud for Wireframing
+// Mock-Up is high-fidelity representation/design of a website.
+
+// for changing color use the classes:
+bg-dark, light, success, danger, primary, secondary, warning etc

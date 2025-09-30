@@ -1,0 +1,159 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.info{
+    width: 100%;
+    height: 500px;
+    background-color: #EAF6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.cloud_name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    color: #66BFBF;
+}
+
+.top_cloud{
+    align-self: flex-start;
+}
+.bottom_cloud{
+    align-self: flex-end;
+}
+
+.top_cloud > img, .bottom_cloud > img{
+    width: 200px;
+}
+
+.name_profession{
+    margin: 0px 10px 0px;
+}
+
+h1{
+    font-size: 4rem;
+    font-family: cursive;
+}
+h2{
+    color: #66BFBF;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h3{
+    color: #66BFBF;
+    font-size: 1.3rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.middle_container, .profile, .skills, .contact_me{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile > img{
+    width: 150px;
+    border: 2px solid gold;
+}
+
+hr{
+    margin-top: 40px;
+    margin-bottom: 40px; 
+    border-style:dotted none none;     /* up right down left */
+    border-color: #d4fafa;
+    height:0px;
+    width: 20%;
+    border-width: 7px;
+    background-color: rgba(0,0,0,0);
+}
+
+.skills img{
+    width: 200px;
+    margin-top: 10px;
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    width: 70%;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.bottom_container{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 100px;
+    background-color: #66BFBF;
+    color: #EAF6F6;
+}
+
+.links{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.links > a{
+    text-decoration: none;
+    color: #EAF6F6;
+}
+
+.skill_row{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.skill_info{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    width: 60%;
+}
+
+.btn{
+    margin-top: 30px;
+    background-color: #2BC4AD;
+    padding: 10px;
+    border-radius:10px;
+    text-decoration: none;
+    color: #EAF6F6;
+}
+
+.btn:hover{
+    background-color: #30E3CB;
+    box-shadow: -3px 3px 10px #2BC4AD;
+}
+
+p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.8rem;
+}
