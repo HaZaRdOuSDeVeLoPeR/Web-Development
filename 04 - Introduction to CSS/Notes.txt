@@ -22,3 +22,5 @@ Good Practice :- define the properties in alphabetical order
 3. Child Selector (>)           Syntax :- A > B {}    :   Select B which is direct descendant of A (one level inside)
 4. Descendant Selector (' ')    Syntax :- A B {}      :   select B which is direct/indirect descendant of A
 5. Simple Grouping (,)          Syntax :- A, B, C, .. {}  select A, B, C ..
+
+Note:- we can also combine different types of selectors Eg:- h1#title.test1.test2 :- select an element which is h1, has id="title" and also has class="test1", "test2"
