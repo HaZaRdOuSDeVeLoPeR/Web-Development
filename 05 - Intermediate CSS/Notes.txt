@@ -49,6 +49,7 @@ Note :- the display property of any element can be changed according to user cho
     Note: this affects the flow(position) of other html elements and completely removes the placeholder of the object from its old position and shifts to new position 
 
 4. fixed :- defines the position relative to viewport. (Creates floating window)
+    Note: takes the element out of html flow (affects the positions of other elements)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

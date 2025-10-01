@@ -6,3 +6,110 @@
 
 // for changing color use the classes:
 bg-dark, light, success, danger, primary, secondary, warning etc
+
+// positioning in bootstrap
+--> use classes "position-static", "position-relative", "position-absolute", "position-fixed" to modify the positioning of elements.
+
+// navbar in Bootstrap
+--> use "navbar" class for activating navbar bootstrap
+--> use "navbar-brand" to enclose brand name
+--> fixed-top/bottom, sticky-top/bottom : class used for positioning
+--> navbar-expand-{-sm|-md|-lg|-xl|-xxl} : class for responsive collapsing 
+    Eg :- navbar-expand-sm : {collapse navbar in small sized screens and so on ..}
+--> bg-dark : class for background colour
+--> navbar-dark : set colour theme
+
+Note:- Navbar Items should be enclosed inside a list and the list container should be marked with "navbar-nav" class.
+
+// margin and padding in bootstrap
+--> m for margin and p for padding
+--> t for top, b for bottom, s for left, e for right
+--> 6 different levels 0, 0.25, 0.5, 1, 1.5, 3 and auto
+
+Eg :-   ms-auto : margin from start(left) as auto
+        pt-5    : padding from top as 3*($spacer)
+
+// grid in bootstrap
+--> use class "row" to enclose one row in a grid
+
+--> Each Row has 12 cols by default in the bootstrap template, we can create a column of desired from
+--> Use class "col-fr_value" to enclose one cell in a grid
+    Eg :- col-4 (creates a cell with a third the size of row (i.e 4/12 = 1/3))
+
+--> Use the breakpoints {-sm|-md|-lg|-xl|-xxl} to make the columns responsive.
+    Eg :-   col-lg-4  (create a cell with a third the size of row in large screens)
+            col-md-6  (create a cell with half the size of row in medium size screens)    and so on ..
+
+    Note :- use col-{breakpoints}-auto to define the width of cell according to content size (be careful with the content size, can break the layout)
+
+// containers in bootstrap
+--> two types of responsive containers
+    1. container - always at the center of the screen and has breakpoints depending on viewport size
+    2. container-fluid - always at the center and occupies 100% width of parent container and adapts fluidly depending on viewport size
+
+// Buttons in bootstrap
+--> base class is "btn" to include in button elements
+--> two types of button :-
+    1. Solid color button with hover state :- use btn-{primary/secondary/dark/right/...}
+    2. Outline color button with fill hover state :- use btn-outline-{primary/secondary/dark/right/...}
+
+--> size customization :- use btn-{sm|md|lg}
+--> use disabled flag to disable the button
+
+// Carousel in Bootstrap (slideshow)
+--> Two types of carousel, manual and automatic (can create a combination of both)
+--> Base class is "carousel"
+
+--> 4 Kinds of transition :-
+    1. No transition    :- use "carousel" class only
+    2. "carousel slide" :- slides will change with slide animation
+    3. "carousel-fade"  :- slides will change with fade animation
+    4. crossfade        :- use "carousel slide carousel-fade"
+
+--> Autoplay controls :- we can set whether carousel will autoplay or not using "data-bs-ride" attribute
+    1. data-bs-ride = "false" :- slides will not change until user wants
+    2. data-bs-ride = "true"  :- slides will start to change after first user interaction
+    3. data-bs-ride = "carousel" :- slides will start playing automatically after webpage is loaded.
+
+    Note :- for autoplay, slide change interval is defined by "data-bs-interval" for each "carousel-item"
+    Note :- autoplay pauses automatically when mouse is hovered over a slide
+
+--> Each carousel slide must be enclosed in a container with class "carousel-item"
+    Note :- one of the slides must be enclosed within "active" class
+
+    Syntax :-
+
+    <carousel transition-style bata-bs-ride="autoplay_value">               (Base Container)
+        <carousel-inner>                                                    (Container containing all the carousel slides)
+            <carousel-item active></carousel-item> 
+            <carousel-item></carousel-item>                                 (Container for each slides)
+            .
+            .
+            <carousel-item></carousel-item>
+        </carousel-inner>
+        <prev-control-button></prev-control-button>                         (Prev and next control buttons)
+        <next-control button></next-control>
+    </carousel-style and autoplay>
+
+// Cards in Bootstrap :-
+--> Similar structure to html document (header-body-footer)
+--> base class is "card"
+--> sections :- card-header, card-body, card-footer
+
+    Syntax :-           (By default a block Element, use grid to make it responsive)
+    <card>
+        <card-header>
+            Header-Content 
+        </card-header>
+        <card-body>
+            Body-Content
+        </card-body>
+        <card-footer>
+            Footer-Content
+        </card-footer>
+    </card>
+
+// Z-Index Stacking Order
+--> Z-Index only works on an element if it is marked as position: {relative|absolute|fixed}
+--> By default, all the elements have z-index of 0
+--> if two or more elements having same z-index overlap, the stacking order is defined by the order in which they are defined in html skeleton.

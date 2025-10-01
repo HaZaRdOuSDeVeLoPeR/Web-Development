@@ -1,0 +1,152 @@
+/* Global Section */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container-fluid, .row, .col{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+}
+h1{
+    font-weight: 800;
+    font-size: 3rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+
+/* Navbar Section */
+.navbar{
+    font-family: "Ubuntu";
+}
+
+.navbar-brand{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.nav-link{
+    font-size: 1.25rem;
+}
+
+/* Title Section */
+.intro{
+    background-color: rgb(225, 62, 89);
+    padding: 0% 10% 0% 0%;
+    overflow: hidden;
+}
+
+.intro h1{
+    margin-top: 80px;
+    padding-bottom: 40px;
+    color: white;
+}
+
+.intro button{
+    width: 40%;
+}
+
+.title-image {
+    transform: rotateZ(30deg);
+    position: relative;
+    left: 15%;
+    top: 8%;
+    animation-name: slidefromtop;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes slidefromtop{
+    from{
+        transform: rotateZ(0deg);
+        top: -100%;
+    }
+    to{
+        transform: rotateZ(30deg);
+        top: 8%;
+    }
+}
+
+/* Feature Section */
+.feature-list{
+    padding: 6% 9% 6% 9%;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+}
+
+.feature-list h3{
+    font-weight: bold;
+}
+
+.feature-list p{
+    font-weight:300;
+    color: gray;
+}
+
+.fa-solid{
+    color: rgba(225, 62, 89, 0.8);
+}
+
+.fa-solid:hover{
+    animation: zoomInOut 0.5s;
+}
+
+@keyframes zoomInOut{
+    50%{
+        color: rgb(225, 62, 89, 1);
+        transform:scale(1.2);
+    }
+}
+
+/* Testimonial Section */
+.testimonial-list{
+    padding: 6% 0% 6% 0%;
+    background-color: rgba(225, 62, 89, 0.8);
+}
+
+#testimonial-section{
+    padding: 0% 15%;
+}
+
+.testimonial-list h2{
+    font-weight: bold;
+    color: white;
+}
+
+.testimonial-list img{
+    width: 200px;
+    border: 0px solid black;
+    border-radius: 100px;
+}
+
+/* Press Section */
+.press{
+    background-color: rgba(225, 62, 89, 0.8);
+}
+.press img{
+    width: 75%;
+    padding: 0% 10% 20% 10%;
+}
+
+/* Pricing Section */
+.pricing{
+    padding: 8% 5%;
+}
+
+.card{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.card h3{
+    font-weight: 800;
+}
