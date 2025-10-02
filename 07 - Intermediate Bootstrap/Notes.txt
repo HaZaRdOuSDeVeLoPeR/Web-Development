@@ -2,11 +2,10 @@
 --> Two types of carousel, manual and automatic (can create a combination of both)
 --> Base class is "carousel"
 
---> 4 Kinds of transition :-
+--> 2 Kinds of transition :-
     1. No transition    :- use "carousel" class only
     2. "carousel slide" :- slides will change with slide animation
     3. "carousel-fade"  :- slides will change with fade animation
-    4. crossfade        :- use "carousel slide carousel-fade"
 
 --> Autoplay controls :- we can set whether carousel will autoplay or not using "data-bs-ride" attribute
     1. data-bs-ride = "false" :- slides will not change until user wants
@@ -20,7 +19,6 @@
     Note :- one of the slides must be enclosed within "active" class
 
     Syntax :-
-
     <carousel transition-style bata-bs-ride="autoplay_value">               (Base Container)
         <carousel-inner>                                                    (Container containing all the carousel slides)
             <carousel-item active></carousel-item> 
