@@ -1,0 +1,39 @@
+// Comparators in JS
+    --> All comparators are similar to C++ except equality and inequality
+
+    Loose Equality (==)     :- returns true if value of both operands are similar
+    Loose inequality (!=)   :- returns true if value of both operands are not similar
+
+    Strict Equality (===)   :- returns true if both value and datatype of both operands is identical
+    Strict Inequality (!==) :- return true if both valie and datatype of both operands are different
+
+
+// Math Object to perform Mathematical operations
+    1. Constants :- 
+        Math.E 
+        Math.PI 
+    
+    2. Functions :-
+        Math.round(x)
+        Math.ceil(x)
+        Math.floor(x)
+        Math.trunc(x) [Return integeral parameter]
+        Math.min(x, y, z, ..)       Math.max(x, y, z, ..)
+
+        Math.pow(x, y)
+        Math.sqrt(x)
+        Math.abs(x);
+        Math.sin(x_in_radians)      Math.cos(x_in_radians)      // returns a value between -1 and 1
+
+        Math.log(x)     [Return log x base e]
+        Math.log10(x)   [Return log x base 10]
+
+        Math.random()   Return a random real number in interval [0, 1)     // always less than 1
+
+        --> to get random number between in range [start, end]
+            rand = Math.random()        // in range [0,1)
+            rand *= (end-start+1)       // scale the range [0, end-start+1)
+            rand += start               // shift the range [start, end+1)
+            rand = Math.floor(rand)     // get the floor   [start, end]
+        
+

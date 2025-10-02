@@ -1,0 +1,42 @@
+// 4 Main Principles of Web Design
+
+1. Color-theory (Choosing Color Pallete) :-
+
+    Red Pallete     :- Love, Energy, Intensity
+    Yellow Pallete  :- Joy, Intellect, Attention
+    Green Pallete   :- Freshness, Safety, Growth
+    Blue Pallete    :- Stability, Trust, Serenity
+    Purple Pallete  :- Royalty, Wealth, Femininity
+
+    --> While Mixing Colours
+        (i)  If motive is to grab attention, mix the colours which are complementary to each other in colour wheel (360deg colour wheel)
+        (ii) If motive is to look good and harmonious, mix the colours which are close to each other in colour wheel (360deg colour wheel)
+
+    Note :- Never use complementary pallete mix for rendering text, always use mix of adjacent colour pallete or high-contrast colours (like black/white)
+    Source :- Use "colorhunt.co" for choosing color pallete for the project
+
+2. Typography (Choosing Font) :-
+
+    [typeface]                  [Signifies]                                 [Mood]
+    "serif"       :- serious, authoratative, old/mordern      [Traditional, Stable, Respectable]
+    "sans-serif"  :- friendly, approachable, contemporary      [Sensible, Simple, Straightforward]
+
+    --> While Combining Fonts, use the fonts of same "typeface" and "mood"
+    Note :- Trying using <=3 fonts for each section in a project
+
+3. UI (User Interface) Design :-
+
+    --> Users are more drawn towards the bigger, bolder , high contrast(brighter) and squarer objects.
+    --> We can use this human nature to induce a attention hierarchy for users by varying these 4 factors for each object.
+
+    Note :-
+    --> For long paragraph, trying fitting ~60 characters per line with appropriate line-height.
+    --> While Alignment, try to minimize overall alignment points (alignment baselines).
+    --> Have appropriate white space (i.e margin and padding) around the content to avoi cramming.
+
+4. UX (User Experience) Deisgn :-
+
+    1. Encourage Simplicity in the Design
+    2. Be Consistent in terms of functionalities across the project
+    3. Follow F-Layout or Z-Layout Reading Pattern for placing text content
+    4. Design the website for all platforms (responsive)

@@ -1,0 +1,85 @@
+// We can write JS inside "Console" of the browser developer tools (for multiple lines use Shift + Enter while line break)
+// We can also write multiple lines JS Code inside "Sources > Snippets" of the browser developer tools.
+
+
+// JS is loosely typed language meaning it is not very strict about data types. 
+    --> Variables can hold values of any type, and the type can change during execution without errors. 
+    --> JS often performs implicit type conversion (type coercion) when needed. (during re-assignment)
+
+
+// Datatypes in JS
+    1. String :- collection of characters
+    2. Numbers :- Integer/Floats
+    3. Boolean :- True/False
+
+    Note :- Use typeof() method to get the datatype of any variable/object
+    Note :- if a variable is marked as 'const' it can't be re-assigned
+
+
+// To print anything, use log() function
+    --> To print to console, call the method on console object :- console.log()
+    --> to clear the console, call the clear method on console object :- console.clear()
+
+
+// To take input from user (in browser only), use prompt() function
+    Eg:- let age = prompt("Enter your Age")
+
+
+// String Operation in JS
+    --> Can use indexing to access individual characters.
+    1. Concatenation :- done using '+' operator 
+        Eg :- "Aditya" + " " + "Vimal" = "Aditya Vimal"
+    
+    2. Length :- Find out the length of string using .length data member
+
+    3. Slice :- Extract Substring from a string from index x upto index y-1 (0-based indexing)
+        Eg :- myName.slice(0,5)     // extracts substring from index 0 to index 4(5-1)
+    
+    4. Case Change :- we can change the case of letters using toUpperCase() and toLowerCase() method
+
+    5. Trim :- Remove whitespace characters from start and end of a string
+        --> trim() :- removes whitespace from both sides (start and end)
+        --> trimStart()     and     trimEnd() also exits
+
+    6. Pad :- Opposite of trim where we can pad the string with a specific character
+        Eg :- myName.padStart(20, '0');      // pad myName string with 0(s) till size becomes 20
+              Similary, padEnd(size, 'padding_char')
+    
+    7. Replace :- replace given instance(s) of substring in a string with another substring
+        Eg :- myString.replace("Kid", "kid")    // replace first instances of "Kid" in myString with "kid"
+
+        Note :- to replace all instances of a substring with another substring, use replaceAll()
+
+    8. Split :- split the string on basis of a seperator and return the list of substrings
+        Eg :- myName.split(" ")     // Splits myName on basis of whitespace and returns split substrings list 
+
+
+// Function in JS
+    1. Function Declaration (Classic Function) :-
+        Syntax :- 
+        function func_name (parameter1, parameter2, ..) {
+            // function body
+            return return_object;   // optional
+        }
+    Note :- Only declarator function is hoisted
+    Note :-  no need of specifying parameter types and return type
+    
+    2. Function Expresstion :- function is stored inside a variable
+        Syntax :-
+        const func_name = function(parameter1, parameter2) {
+            // function body
+            return return_object;   // Optional
+        }
+    Note :- Function is not hoisted
+
+    3. Arrow Function :- the keyword "function" is ommited and => operator is used to start the function body
+        Syntax :-
+        const func_name = (parameter1, parameter2, ..) => {
+            // function body
+            reutrn return_object;   // optional
+        }
+
+    4. Anonymous Function :- function without a name, used inline as callbacks
+        Syntax 1 :-                                         Syntax 2 :-
+        function(parameter1, parameter2, ..) {}             (parameter1, parameter2, ..) => {}
+
