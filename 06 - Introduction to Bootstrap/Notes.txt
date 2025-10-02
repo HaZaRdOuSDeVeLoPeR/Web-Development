@@ -1,14 +1,18 @@
 // Bootstrap can be seen as a library of front-end web designs.
 
+
 // Wireframing is low-fidelity representation/design of a website before starting to implement any website.
 --> Use balsamiq.cloud for Wireframing
 // Mock-Up is high-fidelity representation/design of a website.
 
+
 // for changing color use the classes:
 bg-dark, light, success, danger, primary, secondary, warning etc
 
+
 // positioning in bootstrap
 --> use classes "position-static", "position-relative", "position-absolute", "position-fixed" to modify the positioning of elements.
+
 
 // navbar in Bootstrap
 --> use "navbar" class for activating navbar bootstrap
@@ -21,6 +25,7 @@ bg-dark, light, success, danger, primary, secondary, warning etc
 
 Note:- Navbar Items should be enclosed inside a list and the list container should be marked with "navbar-nav" class.
 
+
 // margin and padding in bootstrap
 --> m for margin and p for padding
 --> t for top, b for bottom, s for left, e for right
@@ -28,6 +33,7 @@ Note:- Navbar Items should be enclosed inside a list and the list container shou
 
 Eg :-   ms-auto : margin from start(left) as auto
         pt-5    : padding from top as 3*($spacer)
+
 
 // grid in bootstrap
 --> use class "row" to enclose one row in a grid
@@ -42,10 +48,12 @@ Eg :-   ms-auto : margin from start(left) as auto
 
     Note :- use col-{breakpoints}-auto to define the width of cell according to content size (be careful with the content size, can break the layout)
 
+
 // containers in bootstrap
 --> two types of responsive containers
     1. container - always at the center of the screen and has breakpoints depending on viewport size
     2. container-fluid - always at the center and occupies 100% width of parent container and adapts fluidly depending on viewport size
+
 
 // Buttons in bootstrap
 --> base class is "btn" to include in button elements

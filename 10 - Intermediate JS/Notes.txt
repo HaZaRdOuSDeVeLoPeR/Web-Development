@@ -37,3 +37,61 @@
             rand = Math.floor(rand)     // get the floor   [start, end]
         
 
+// Arrays and its operations in JS
+    Syntax for declaration :-
+    let arr_name = [obj1, obj2, ..., objn]
+
+    --> Can be accessed using indexing operator (0-based indexing)
+    --> Arrays in JS are dynamic size
+    --> Can store heterogenous data
+
+    --> Iterating over arrays :-
+        1. Using index-based for-loop
+        2. Using forEach() function. 
+           Inside forEach(), we need to pass the function which does the operation needed for each element in the array
+
+    Array Operations :-
+
+    1. Length :- return the length/size of array using .length data member
+
+    2. Sorting :- 
+    sorts the array. By default, sorts in ascending order. 
+    Use Custom Comparator (by anonymous function) for custom sort.
+    --> Comparator should return >0 when swapping is needed.
+    --> Syntax :- array.sort(comparator_func)
+
+    3. Appending an element at end using push() method
+    --> Syntax :- arr_name.push(obj)
+
+    4. Removing an element at end using pop() method
+    5. Removing one element at front of array using shift() method
+
+    6. Appending an element at front of array using unshift() method
+    --> Syntax :- arr_name.unshift(obj)
+
+    7. Concatenating two or more arrays using concat() function
+    --> Syntax :- result = arr1.concat(arr2, arr3, ..)
+
+    Note :- concat() function never modifies the original array. 
+            It "always constructs a new array" and returns it.
+    
+    8. Converting the array into string using a user-defined seperator [join() method]
+    --> It is opposite of split() method in string
+    --> string.split(seperator) <==> array.join(seperator)
+    --> Syntax :- let myString = array.join(seperator)
+
+    Note :- join() function never modifies the original array. 
+            It "always constructs a new string" and returns it.
+
+    9. Extracting Subarray from the Array using slice() function [similar to slice in string]
+
+    10. Searching for an element using indexOf();
+        --> returns a valid index of "first occurent of the object" if it is present else -1 if absent
+        --> to find last occurence, use lastIndexOf() method instead of indexOf() method
+        --> we can also define the starting index from where to begin the Searching
+
+        --> Syntax :- let first_occurence = arr.indexOf("object", 0)        // start searching for "object" from index 0
+        --> Syntax :- let last_occurence = arr.lastIndexOf("object", -1)    // start searching for "object" from end of the array
+
+    11. Reverse an array using reverse() function
+        --> Syntax :- arr_name.reverse()        // does the reverse in-place
