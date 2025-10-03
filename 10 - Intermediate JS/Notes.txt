@@ -47,8 +47,16 @@
 
     --> Iterating over arrays :-
         1. Using index-based for-loop
-        2. Using forEach() function. 
            Inside forEach(), we need to pass the function which does the operation needed for each element in the array
+
+        2. Using for-of loop.   [used to access values only]
+            Syntax :- for(const entry of array) {}
+
+        3. Using for-in loop.   [used to access keys, which can be then used to access values]
+            Syntax :- for(const key in array) {}
+            Note :- Invalid in sets (don't have keys)
+            
+        4. Using forEach() function. 
 
     Array Operations :-
 
@@ -92,6 +100,8 @@
 
         --> Syntax :- let first_occurence = arr.indexOf("object", 0)        // start searching for "object" from index 0
         --> Syntax :- let last_occurence = arr.lastIndexOf("object", -1)    // start searching for "object" from end of the array
+
+        Note :- if the requirement is only to know if the element is present or not then use includes() method
 
     11. Reverse an array using reverse() function
         --> Syntax :- arr_name.reverse()        // does the reverse in-place

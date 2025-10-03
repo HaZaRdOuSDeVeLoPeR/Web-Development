@@ -7,7 +7,7 @@ console.log(typeof(true));
 let age = 18;
 console.log("Your age :", age);
 
-// String Operations
+// String Operations [Except conatenation, all operations are immutable]
 
 // 1. Concatenation
 console.log("==========================================================");

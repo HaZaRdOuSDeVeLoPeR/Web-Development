@@ -1,16 +1,19 @@
 let list = [3,4,2,1];
-
-// Iterating over Array using forEach() function (defining function seperately)
-list.forEach(display);
-function display(value){
-    console.log(value);
+// Iterating over Array using index based-for loop
+for(let i=0; i<list.length; i++){
+    console.log("Index based loop :", list[i]);
 }
-// Iterating over Array using forEach() function (defining function inline using anonymous function)
-list.forEach((value) => {
-    console.log(value);
-});
+// Iterating over Array values using for-of loop [in case of set and map, it iterates of values]
+for(const entry of list){
+    console.log("for-of-loop", entry);
+}
+// Iterating over Array keys and using it to access values using for-in loop [invalid in case of set since sets don't have keys]
+for(const idx in list){
+    console.log("Index =",idx, ":", "Value =", list[idx])
+}
 
-
+// Array Operations :- 
+// (operations sort, push, pop, shift, unshift and reverse are mutable)
 // 1. Length of array
 console.log("==========================================================");
 console.log("Size of Array :", list.length);
@@ -86,6 +89,7 @@ console.log("Last occurence of 3 :", last_occurence);
 
 let occurence = mylist.indexOf(10);
 console.log("Presence of 10 in Array at :", occurence);
+console.log(mylist.includes(10));       // returns true/false
 
 // 11. Reverse any array using reverse() function   [inplace reverse]
 console.log("==========================================================");

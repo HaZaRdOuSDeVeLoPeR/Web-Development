@@ -1,0 +1,118 @@
+// to display an alert message, use alert("message") function.
+
+
+// 2 ways to add javascript to website
+    1. internal javascript :- write all the codes inside <script> tag.
+    2. external javascript :- link a external js file inside script tag using "src" attribute.
+
+    --> Note :- When linking js, always include it at the end of body content. 
+        i.e script should be loaded after website (all objects) finishes loading to avoid any undefined object reference.
+
+
+// DOM is a catalogue of objects available on a webpage which can be selected and manipulated using javascript to give these objects a dynamic behaviour.
+// DOM is represented in tree like structure.
+// The parent container is the parent node in tree and all their direct child containers are the child nodes in the DOM tree.
+    Eg :-   <html>                                        (document)
+                <head>                                        |
+                    <title></title>                         html
+                </head>                                    /    \                            
+                <body>                =====>            head    body       [DOM Tree]
+                    <h1></h1>                            /      /  \
+                    <h2></h2>                         title    h1   h2
+                </body>
+            </html>
+
+// "document" is the global object :root container of the webpage. Every element is its descendant.
+
+// Every object in the DOM tree has its own properties, methods and events.
+    --> properties are accessed using "." operator
+    --> methods are accessed using .method()
+
+
+// Methods Select an Element in DOM ("document" object)
+    [Generalised Selector]
+    1. querySelector :- returns the first element which matches the specified css_selector
+    --> to get all the elements of matching css_selector use querySelectorAll()
+
+    Syntax  :- selectedElement = document.querySelector("tag" | ".class" | "#id" | [attribute = value])
+    Eg      :- selectedElements = document.querySelectorAll(".container")
+
+
+    2. getElementsBy :- returns the collection of element(s) with specified id | class | tag | name(attribute)
+    
+    Syntax :- 
+    selectedElement = document.getElementById("id")
+    selectedElements = document.getElementsByClassName("class")
+    selectedElements = document.getElementsByTagName("tag")
+    selectedElements = document.getElementsByName("value_of_name_attribute")
+
+
+// Methods to alter selected elements
+
+    1. Alter the internal HTML code of a selected element using innerHTML property
+    Syntax :-
+        let selectedHTML = selectedElement.innerHTML    // get the innerHTML code of the selected element
+        selectedElement.innerHTML = alteredHTMLCode     // change the innerHTML code of selected element
+    
+    Note :- Avoid using innerText as it trigger "reflow". innerHTML is more efficient and only triggers "repaint".
+
+
+    2. Alter the styling of a selected element using "style" attribute
+    
+    (i) Alter property through JS (one at a time) :-
+        Syntax :- selectedElement.style.attribute = "value"
+        Eg     :- selectedElement.style.borderColor = "red"     // change backgroundColor of selected element to red
+
+        Note :- naming scheme of style attribute in JS is different (follows camel casing) from CSS
+
+    (ii) Alter the CSS styling applied on the element directly (multiple at a time) using "cssText":-
+        --> cssText returns the CSS code(styling) applied on the element in string format
+        Syntax :- selectedElement.style.cssText = "css_styling";
+        Eg     :- selectedElement.style.cssText = "font-size: 2rem; color: red;"        // change the font-size and color of selected element
+               :- selectedElement.style.cssText += "border: 5px solid black;"          // add a border to selected element
+
+        Note :- when adding a style, don't overwrite the existing string. Use concatenation instead.
+
+
+    3. Alter the selected HTML elements
+
+    (i) Alter the Class, Id, attributes of an element :-
+        (a) Altering/Adding/Removing attribute :-
+        Syntax :- 
+        selectedElement.setAttribute("attribute_name","attribute_value")        // Altering/Adding
+        selectedElement.removeAttribute("attribute_name")                       // Removing an attribute
+
+        Note :- id can also be altered using setAttribute("id", "id_name") and removeAttribute("id")
+        Note :- use selectedElement.getAttribute("atribute_name") method to get the value of attribute_name of selectedElememt                       
+        
+        (b) Altering/Adding/Removing/Toggle Class of an element :-
+        Syntax :-
+        selectedElement.classList.add("class_name")                             // Adding a class to selected element
+        selectedElememt.classList.remove("class_name")                          // Removing a class of selected element
+        selectedElement.classList.toggle("class_name")                          // Toggling active state of a class to selected element
+
+
+// Methods to Insert and Delete an Element into/from document
+
+    (a) Create an element which belongs to current document
+    Syntax :-
+    document.createElement("tag_name")
+    Eg :- document.createElement("h1")      // create an element h1 which belongs to document DOM tree
+
+    Note :- 
+    --> Newly created element(node) is unique and can't be present at two places at same time.
+    --> If multiple instances of a newly created element is needed then we need to make a deepcopy
+
+    (b) Delete an selected element :-
+    Syntax :-
+    selectedElement.remove()                // removes the selected element
+    parentElement.removeChild(childElement) // removes childElement from parentElement
+
+    (c) Inserting an newly created element
+    Syntax :-
+    parentElement.append(childElement)      // adds an childElement to the end of parentElement
+    parentElement.prepend(childElement)     // adds an childElement to the start of parentElement
+    siblingA.before(siblingElement)         // adds a siblingElement before sibilingA
+    siblingA.after(siblingElement)          // adds a siblingElement after sibilingA
+
+    
