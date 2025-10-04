@@ -1,0 +1,44 @@
+// Use FlexBox to place contents along 1D and Grid to place contents along 2D
+// to make a container a grid system, mark its display property as "flex"
+
+Note:- Good practice is to make each cell flexbox 
+[i.e keep dividing the layout using grid untill only 1D alignment is needed, then use flexbox in that cell]
+[i.e define flexbox along a row only or column only]
+
+Syntax :- 
+gridContainerSelector{
+    display: grid;
+
+    // create a 4x4 grid where rows are in ratio 1:2 an columns in ratio 1:2
+    grid-template-rows: 1fr 2fr;    
+    grid-template-columns: 1fr 2fr;
+
+    // create a 4x4 grid with fixed rows and column dimensions [non-responsive]
+    grid-template-rows: 100px 200px;    
+    grid-template-columns: 100px 200px;
+
+    // create a 4x4 grid with reponsive dimensions according to content-dimensions
+    grid-template-rows: auto auto;          // can also write : repeat(2, auto)
+    grid-template-columns: auto auto;
+
+    Note: auto along row is defined as "take as much space as content-height"
+    Note: auto along column is defined as "take as much space as widow but don't shrink beyond content-width"
+
+    // create a 4x4 grid with minimum and maximum dimensions limit
+    grid-template-rows: 100px 200px;
+    grid-template-columns: minmax(100px, 200px), minmax(200px, 400px);   
+}
+
+Syntax for Generalised Grid :-
+gridContainerSelector{
+    // generalised version of grid (defining each cell layout and dimensions)
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "sidebar footer footer";
+
+    // create a 3x3 grid :- row1 is for header, row2 is (sidebar|main) in ratio 1:2 and row3 is (sidebar|footer) in ratio 1:2
+    // here area are the names given to grid-items using grid-area for the container placed inside grid
+}

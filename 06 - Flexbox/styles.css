@@ -1,0 +1,38 @@
+body {
+    font-family: 'Sono', sans-serif;
+}
+
+.pricing-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 3%;
+    justify-content: center;
+    padding: 5%;
+}
+
+.pricing-plan{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5%;
+    background-color: rgba(128, 128, 128, 0.19);
+    min-width: 190px;
+    max-width: 28%;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.ul{
+    box-sizing: border-box;
+    padding-right: 100%;
+}
+
+.plan-button{
+    width: 25%;
+    background-color: orangered;
+    border-radius: 5px;
+    padding: 5px;
+}

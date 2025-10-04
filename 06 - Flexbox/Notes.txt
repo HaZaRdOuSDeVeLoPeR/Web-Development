@@ -1,0 +1,24 @@
+// To make a container flex, mark its display property as "flex"
+// use "gap" attribute to add margin between boxes
+// use "flex-direction" to change main-axis
+// use align-items and justify-content for alignment
+
+Syntax :-
+flexContainerSelector{
+    display: flex;
+    flex-direction: {row|col};      // direction of box arrangement
+    flex-wrap: {nowrap|wrap};       // whether to continue displaying onto next line when space runs out along main-axis
+    gap: gap_px;
+    align-items: {start|center|end|space-around|space-evenly|space-between};            // along cross-axis
+    align-content: {start|center|end|space-around|space-evenly|space-between};          // along cross-axis which works only when container is marked with flex-wrap: wrap
+    justify-content: {start|center|end|space-around|space-evenly|space-between};        // along main-axis
+}
+
+flexItemSelector{
+    flex-basis: minDim;             // set minimum dimension of flexChildElement along main-axis
+    align-self: {start|center|end}; // along cross-axis
+    flex-grow: ratio;               // grow ratio w.r.t other flex items beyond flex-basis 
+    flex-shrink: ratio;             // shrink ratio w.r.t other flex items beyonf flex-basis
+}
+
+Note : Flexbox creates a block container inside which each container becomes inline-block.
