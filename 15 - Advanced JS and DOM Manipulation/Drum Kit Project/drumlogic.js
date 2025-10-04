@@ -27,15 +27,14 @@ const keyMap = {"w":0, "a":1, "s":2, "d":3, "j":4, "k":5, "l":6}
 document.addEventListener("keypress", async function(event) {
     let keypressed = event.key;
     let idx = keyMap[keypressed];
-    console.log(idx);
-
+    
     if(idx != undefined)
     {
-        buttons[i].classList.add("button-active");
+        buttons[idx].classList.add("button-active");
         let audio = new Audio("./sounds/"+keypressed.toLowerCase()+".mp3");
         audio.play();
         setTimeout(() => {
-            buttons[i].classList.remove("button-active");
+            buttons[idx].classList.remove("button-active");
         }, 100)
     }
 
