@@ -1,0 +1,57 @@
+// add event listener to an object
+    Syntax :-
+    selectedElement.addEventListener("event_name", anonymous_event_handler_function);
+
+    Eg:-
+    button.addEventListener("click", (event) => {                // EventListener listening for mouseClicks
+        alert("I got Clicked : " + button.textContent);
+    });
+
+    // here, the event object containes all necessary information about the click event which was triggered the event handler function. 
+
+// Objects in JS
+    Objects is an array of key-value pair. The values of keys can be accessed using "." operator
+
+    Syntax:-
+    let obj = {key1: value1, key2: value2, key3: value3, ...}
+
+    To access the attributes we write :- obj.key
+
+    Eg :- let Worker = {name: "Aditya", age: 20, experience: 3, knows_coding: true}
+
+// Object construction through constructor function :-
+    Syntax :-
+    function Object_Constructor_Name(param1, param2, ..){
+        this.param1 = param1;
+        this.param2 = param2;
+        .
+        .
+    }
+
+    In JS, 
+    --> when a method is called without "new" keyword, it is treated as normal function call.
+    --> when a method is called with "new" keyword, it is treated as constructor call.
+        How "new" operator functions internally :-
+        --> creates a new empty object
+        --> links that object to object.prototype
+        --> binds "this" inside the constructor function to the new object
+        --> returns the new object.
+    
+    syntax :- let myObj = new Object_Constructor_Name(param1, param2, ...)
+
+
+// in JS, function name can be passed as a parameter which is known as callback
+
+Eg:-
+function greet(name, callback){
+    console.log("Hello", name);
+    callback();                     // here callback is a function which is passed as an argument
+}
+
+function sayBye(name){
+    console.log("Goodbye", name);
+}
+
+greet(Aditya, sayBye)
+
+        
