@@ -3,8 +3,9 @@ let buttons = document.querySelectorAll("button");
 
 // generic function to add generic event listener to generic object
 function addListener(object, event_type){
-    object.addEventListener(event_type, async function() 
+    object.addEventListener(event_type, async function(event) 
         {
+            event.preventDefault();
             object.classList.add("button-active");
             let audio = new Audio("./sounds/"+object.textContent.toLowerCase()+".mp3");
             audio.play();
