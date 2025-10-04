@@ -21,9 +21,11 @@ function addListener(object, event_type){
 // add click and touch event listeners to all buttons
 for(const button of buttons)
 {
+    // addListener(button, "click");
+    // addListener(button, "touchstart");
+
     // can also use morder version "pointerdown" event which works on both desktop and mobile devices [pointerdown = mousedown + touchstart + click]
-    addListener(button, "click");
-    addListener(button, "touchstart");
+    addListener(button, "pointerdown");
 }
 
 // keypress lookup map
