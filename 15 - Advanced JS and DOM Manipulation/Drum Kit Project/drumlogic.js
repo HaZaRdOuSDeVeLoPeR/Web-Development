@@ -5,13 +5,14 @@ let buttons = document.querySelectorAll("button");
 function addListener(object, event_type){
     object.addEventListener(event_type, async function(event) 
         {
+            // this gives the instance of the object which tiggered the function
             event.preventDefault();
-            object.classList.add("button-active");
-            let audio = new Audio("./sounds/"+object.textContent.toLowerCase()+".mp3");
+            this.classList.add("button-active");
+            let audio = new Audio("./sounds/" + this.textContent.toLowerCase() + ".mp3");
             audio.play();
             setTimeout(
                 () => {
-                    object.classList.remove("button-active");
+                    this.classList.remove("button-active");
                 }, 100
             )
         }
@@ -21,10 +22,6 @@ function addListener(object, event_type){
 // add click and touch event listeners to all buttons
 for(const button of buttons)
 {
-    // addListener(button, "click");
-    // addListener(button, "touchstart");
-
-    // can also use morder version "pointerdown" event which works on both desktop and mobile devices [pointerdown = mousedown + touchstart + click]
     addListener(button, "pointerdown");
 }
 
@@ -32,18 +29,18 @@ for(const button of buttons)
 const keyMap = {"w":0, "a":1, "s":2, "d":3, "j":4, "k":5, "l":6}
 
 // add keyboard keypress event listener to the whole document
-document.addEventListener("keypress", async function(event) 
+document.addEventListener("keydown", async function(event) 
 {
     let keypressed = event.key;
     let idx = keyMap[keypressed];
 
     if(idx != undefined)
     {
-        buttons[idx].classList.add("button-active");
-        let audio = new Audio("./sounds/"+keypressed.toLowerCase()+".mp3");
+        this.classList.add("button-active");
+        let audio = new Audio("./sounds/"+ keypressed.toLowerCase() + ".mp3");
         audio.play();
         setTimeout(() => {
-            buttons[idx].classList.remove("button-active");
+            this.classList.remove("button-active");
         }, 100)
     }
 });
