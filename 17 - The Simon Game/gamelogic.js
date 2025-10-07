@@ -4,7 +4,7 @@ let game_over = $(".game-over");
 let leaderboards = $(".leaderboards");
 
 let level = 1;          // level determines the dimensions of grid
-let lives = 1;
+let lives = 3;
 let playing = false;    // display game-panel
 let paused = false;     // diplay main-menu
 let gameOver = false;   // display game-over
@@ -65,10 +65,10 @@ function validateSequence(){
                 lives--;
                 
                 if(!lives){
+                    gameOver = true;
                     updateLeaderboard();
                     playAudio("./sounds/wrong.mp3");
                     scores[currentUser] = Math.max(scores[currentUser], currscore);
-                    gameOver = true;
                     changeWindow();
                     clearInterval(verifyLoopID);
                 }
@@ -107,7 +107,7 @@ $(document).ready(function(){
             continueButton.removeClass("disabled");
             gameloopID = setInterval(function()                     // main game loop
             {
-                if(prevlevel != level || prevlives != lives)
+                if((prevlevel != level || prevlives != lives) && !gameOver)
                 {
                     prevlevel = level;
                     prevlives = lives;
@@ -121,8 +121,8 @@ $(document).ready(function(){
 
                 if(gameOver){
                     continueButton.addClass("disabled");
-                    gameloopID = 0;
                     clearInterval(gameloopID);
+                    gameloopID = 0;
                 }
             }, 1000)
         }
@@ -156,6 +156,7 @@ function addPointerListener(object, task)
     {
         $(object).on("pointerdown", function(event){
             level = 1;
+            lives = 3;
             currscore = 0;
             let username = prompt("Enter your Name :");
             let userIdx = userName.indexOf(username);
@@ -195,25 +196,25 @@ function addPointerListener(object, task)
     else if(task == "restart"){
         $(object).on("click", function(event){
             level = 1;
-            lives = 1;
-            gameloopID = 0;
+            lives = 3;
             paused = gameOver = false;
             playing = true;
             changeWindow();
             $(".game-panel > .level").text("Press Any Key to Start");
             clearInterval(gameloopID);
+            gameloopID = 0;
         });
     }
     else if(task == "menu"){
         $(object).on("click", function(event){
             console.log("true")
             level = 1;
-            lives = 1;
-            gameloopID = 0;
+            lives = 3;
             paused = true;
             playing = gameOver = false;
             changeWindow();
             clearInterval(gameloopID);
+            gameloopID = 0;
         });
     }
     else if(task == "exit")
