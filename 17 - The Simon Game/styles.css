@@ -1,0 +1,115 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(123, 132, 255, 1.000) 0.000%, rgba(104, 165, 255, 1.000) 16.667%, rgba(95, 198, 255, 1.000) 33.333%, rgba(99, 229, 252, 1.000) 50.000%, rgba(115, 255, 205, 1.000) 66.667%, rgba(141, 255, 157, 1.000) 83.333%, rgba(174, 255, 111, 1.000) 100.000%)
+}
+
+.main-menu, .game-panel, .game-over{
+    display: none;
+    width: min(90vw, 100vh);
+    height: min(90vw, 100vh);
+}
+.leaderboards{
+    position: absolute;
+    display: none;
+    z-index: -1;
+    width: min(90vw, 100vh);
+    height: min(90vw, 100vh);
+}
+
+.btn{
+    width: 60%;
+    font-weight: 600 !important;
+    font-size: 2rem !important;
+}
+
+.red, .blue, .green, .yellow{
+    width: 80%;
+    height: 80%;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+.red > button, .blue > button, .green > button, .yellow > button{
+    width: 98%;
+    height: 98%;
+    opacity: 0%;
+}
+
+.flashWhite{
+    animation: flashWhite linear 0.5s;
+}
+@keyframes flashWhite{
+    50%{
+        background-color: white;
+    }
+}
+
+.flashRed{
+    animation: flashRed linear 0.5s;
+}
+@keyframes flashRed{
+    50%{
+        background: red;
+    }
+}
+
+.red{
+    background-color: red;
+    grid-area: red;
+}
+.blue{
+    background-color: blue;
+    grid-area: blue;
+}
+.green{
+    background-color: green;
+    grid-area: green;
+}
+.yellow{
+    background-color: yellow;
+    grid-area: yellow;
+}
+
+.tiles{
+    width: 85%;
+    height: 85%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas :
+        "red blue"
+        "green yellow";
+    justify-items: center;
+    align-items: center;
+}
+
+.container-active{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.container-active > h1{
+    color: white;
+    font-size: min(15vw, 15vh);
+    margin-bottom: 10%;
+    text-shadow: -5px 5px rgb(11, 55, 229);
+}
+
+.container-active > h2{
+    font-family: 'Press Start 2P', cursive;
+    font-size: min(6vw, 6vh);
+}

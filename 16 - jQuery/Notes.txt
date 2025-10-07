@@ -50,7 +50,7 @@ selectedElement.removeAttribute("attribute")        <===>       selectedElement.
 selectedElement.classList.add("class")              <===>       selectedElement.addClass("class")
 selectedElement.classList.remove("class")           <===>       selectedElement.removeClass("class")
 selectedElement.classList.toggle("class")           <===>       selectedElement.toggleClass("class")
-selectedElement.classList.contains("class")         <===>       selectedElement.hasClass("class")
+selectedElement.classList.includes("class")         <===>       selectedElement.hasClass("class")
 
 // DOM navigation
 selectedElement.parentElement                       <===>       selectedElement.parent()
