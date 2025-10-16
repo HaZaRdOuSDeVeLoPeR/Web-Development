@@ -1,0 +1,48 @@
+// ExpressJS is a special FrameWork for NodeJS which makes working with NodeJS easier
+--> Similar to What jQuery does for Vanilla JS
+--> Helps to organise and structure the code for building web applications.
+
+// Steps for Including Express Package 
+--> follow similar steps to create a new Node Project then type "npm install express"
+
+// "nodemon" is another FrameWork which auto restarts node server if any change in source code is detected.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// create an instance of the server using express()
+--> Syntax: const app = express();      // app is the instance of server created
+
+// configure the app to listen to requests on a specified port using "listen" method
+--> Syntax: app.listen(port_no, handler_function)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// handling http get requests using "app.get()" method
+--> Syntax: app.get(request_location, handler_function)
+
+--> Eg: app.get('/', handler_function)              // server will trigger handler_func when browser requests for https://localhost:port/
+--> Eg: app.get('/folder', handler_function)        // server will trigger handler_func when browser requests for https://localhost:port/folder/
+
+// to send a response inside get() method, use "send()" method
+// to send a file as a response, use "sendFile()" method
+Note :- File paths must be absolute (i.e use __dirname to access the path of server.js)
+Node :- Only one send() method is allowed per get request. To send multiple lines, append them all to one string or use .write() method.
+
+
+// handling http post requests (for forms) using "app.post()" method
+--> Syntax: app.post(request_location, handler_function)
+
+// To serve static files using node server like locally stored images, stylesheets etc, use express.static("directory_of_static_files")
+--> Syntax: app.use(express.static("directory_of_static_files"))
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Parsing form data using "body-parser" module (Middleware for express that parses incoming request bodies)
+    --> const bodyParser = require('body-parser')           // include the package
+// app.use() to define which Middleware to use
+    --> app.use(bodyParser.urlencoded({extended: true}))    // urlencoded() parses HTML form data
+                                                            // extended: true allows parsing of nested objects
+
+// to get the value of form fields with attribute :- name = "val" -----> use request.body.val
+
+Note :- mordern express already has body-parser inbuilt. app.use(express.urlencoded({extended: true}))      // same as using body-parser explicitly

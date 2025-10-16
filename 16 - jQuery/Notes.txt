@@ -1,0 +1,85 @@
+// jQuery is JS Library.
+// Basically it reduces the length of functions used in DOM manipulation to make functions shorter, easier to type and read.
+
+           
+// when jQuery library is included in HTML, it must be done before all the project related JS files.
+    --> best practice is to include jQuery in head section.
+// Minified versions of libraries can be created on minifier.org which is preffered over human-readable version
+    --> Minified versions of scripts/css files are smaller in size and hence are quicker to load
+
+
+// Conversion of Vanilla JS to jQuery
+
+-->             Vanilla JS                          <===>          jQuery
+
+// create an element
+document.createElement("element")                   <===>       $("<element></element>")
+
+// delete an element
+selectedElement.remove()                            <===>       selectedElememt.remove()
+parent.removeChild(child)                           <===>       parent.find(child).remove()
+
+// insert an element
+parent.append(child)                                <===>       parent.append(child)
+parent.prepend(child)                               <===>       parent.prepend(child)
+siblingB.before(siblingA)                           <===>       siblingB.before(siblingA)    
+siblingA.after(siblingB)                            <===>       siblingA.after(siblingB)
+
+// select an element
+document.querySelector("selector")                  <===>       $("selector").first()
+document.querySelectorAll("selector")               <===>       $("selector")
+
+// modify inner html or text
+selectedElement.innerHTML                           <===>       selectedElement.html()
+selectedElement.innerHTML = "modified_html"         <===>       selectedElement.html("modified_html")
+selectedElement.innerHTML += "added_html"           <===>       selectedElement.append("added_html")
+// similary for appending at the beginning          <===>       selectedElement.prepend("added_html")
+selectedElement.textContent = "new_text"            <===>       selectedElement.text("new_text")
+
+// modify styling of element
+selectedElement.style.attribute                     <===>       selectedElement.css("attribute")
+selectedElement.style.attribute = "value"           <===>       selectedElement.css("attribute", "value")
+selectedElement.style.cssText = "new styling"       <===>       selectedElement.css(object of attribute:value pair)
+
+// modify attribute of an element
+selectedElement.getAttribute("attribute")           <===>       selectedElement.attr("attribute")
+selectedElement.setAttribute("attribute", "val")    <===>       selectedElement.attr("attribute", "value")
+selectedElement.removeAttribute("attribute")        <===>       selectedElement.removeAttr("attribute")
+
+// class operations on element
+selectedElement.classList.add("class")              <===>       selectedElement.addClass("class")
+selectedElement.classList.remove("class")           <===>       selectedElement.removeClass("class")
+selectedElement.classList.toggle("class")           <===>       selectedElement.toggleClass("class")
+selectedElement.classList.includes("class")         <===>       selectedElement.hasClass("class")
+
+// DOM navigation
+selectedElement.parentElement                       <===>       selectedElement.parent()
+selectedElement.children                            <===>       selectedElement.children()
+selectedElement.firstElementChild                   <===>       selectedElement.children().first()
+selectedElement.lastElementChild                    <===>       selectedElement.children().last()
+selectedElement.nextElementSibling                  <===>       selectedElement.next()
+selectedElement.previousElementSibling              <===>       selectedElement.prev()
+selectedElement.closest("ancestor")                 <===>       selectedElement.closest("ancestor")     // closest ancestor with given selector
+selectedElememt.querySelector("descendant")         <===>       selectedElement.find("descendant")      // descendant with given selector
+
+// adding event listeners
+selectedElement.addEventListener("event_type", handler)  <===>  selectedElement.on("event_type", handler)
+
+Note :- for jQuery to work on any element, all the elements must be jQuery objects
+--> to make any element a jQuery object, wrap it inside $()
+--> best practice is to wrap all the objects and parameters when calling a jQuery method.
+
+
+Note :- when using jQuery, wrap all the jQuery depdendent sourceCode inside :-
+$(document).ready(function(){
+    // WRITE JS CODE HERE
+});
+
+--> This ensures that the js source code is executed once document (also the jQuery library) has finished loading
+
+
+// Adding animation using jQuery :-
+Syntax :- selectedElement.animate(keyframes1);
+
+Note :- we can also chain the animations
+Syntax :- selectedElement.animate(keyframes1).animate(keyframes2).animate(keyframes3) ...

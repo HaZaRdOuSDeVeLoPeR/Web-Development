@@ -1,0 +1,26 @@
+// Syntax for wrting CSS:- 
+selector{
+    property1: value1; 
+    property2: value2; 
+    ...
+}
+Good Practice :- define the properties in alphabetical order
+
+// for IDs, duplicates are not allowed. One element can have only one ID.
+// for Classes, duplicates are allowed. One element can have multiple classes.
+
+// Types of selectors (sorted by priority)
+1. !important flag : highest priority
+2. ID selector
+3. Class, Pseudo Class and Attribute Selector ([type="attribute_name"])
+4. Type(Tag) Selector
+5. Universal Selector (*)
+
+// Combining selectors
+1. Adj-Sibling Selector (+)     Syntax :- A + B {}    :   Select B which comes immediately after A
+2. General Sibling Selector (~) Syntax :- A ~ B {}    :   Select all B which is at same level as A in DOM tree and comes after A
+3. Child Selector (>)           Syntax :- A > B {}    :   Select B which is direct descendant of A (one level inside)
+4. Descendant Selector (' ')    Syntax :- A B {}      :   select B which is direct/indirect descendant of A
+5. Simple Grouping (,)          Syntax :- A, B, C, .. {}  select A, B, C ..
+
+Note:- we can also combine different types of selectors Eg:- h1#title.test1.test2 :- select an element which is h1, has id="title" and also has class="test1", "test2"

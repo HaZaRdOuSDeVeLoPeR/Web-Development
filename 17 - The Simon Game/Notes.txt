@@ -1,0 +1,7 @@
+for while(true) loop with wait time, use setInterval.
+use clearInterval to break out of the loop
+
+To do :-
+Score display
+Leaderboard Logic fix
+Mobile UI Fix

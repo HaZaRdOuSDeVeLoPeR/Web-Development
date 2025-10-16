@@ -1,0 +1,16 @@
+{
+  "name": "simple-calculator",
+  "version": "1.0.0",
+  "description": "Making a Simple Calculator for binary operations",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "Aditya",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0"
+  }
+}

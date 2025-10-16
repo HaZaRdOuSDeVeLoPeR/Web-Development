@@ -1,0 +1,70 @@
+// API is a set of commands, functions, protocols and objects that 
+we can use "to create software" or "interact with an external system".
+
+// Our server puts on a request to another server through an API for some data and the server sends back the response through the API
+           Req/Res     Req/Res
+Our Server <-----> API <-----> Another Server
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+// API has 4 parts :-
+1. endpoint(root location of API) :- 
+    Eg: GET https://sv443.net/jokesapi/v2/jokesapi
+
+2. paths(further branches on root location)         
+    Eg: GET https://sv443.net/jokesapi/v2/jokesapi/Programming
+
+    Here, "/Programming" is the path(branch of endpoint)
+
+3. parameters(specificity)
+    Eg: GET https://sv443.net/jokesapi/v2/jokesapi/Programming?blacklistFlags=nsfw,racist&type=single&contains=debugging
+
+    Here, "?blacklistFlags=nsfw,racist&type=single&contains=debugging" is the parameter
+    --> parameters start from '?' onwards
+    --> multiple parameters are seperated with '&'
+    --> mutiple parameter values are seperated with ','
+
+4. authentication :- also a type of parameter used to authenticate with users
+
+Note :- The Response sent back by APIs are mostly in .json format
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+// JSON stands for javascript object notation i.e they can be viewed as :-
+    recursive {Key: value} pairs seperated by ','
+
+// The received JSON file from API is in raw bytes form. We need to parse it.
+    --> use "JSON.parse(data)" to parse the raw JSON into human readable form.
+
+Note :- "JSON.stringify()" method does the opposite of "JSON.parse()" i.e converts data in 1-D format
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+// to make http requests to API servers, use request method of https module.
+Syntax for Request :-
+    const request = https.request(requrl, options, callback_function(response){     // define request function
+        response.on('data', handler)    // fired when some data is received
+        response.on('end', handler)     // fired when server is finished sending data
+        response.on('error', handler)   // fired when some error in receiving data 
+    });
+
+    request.on('error', handler)        // fired when some error in making request
+    request.write(data)                 // used to send data to server
+    request.end()                       // used to initiate get request / indicate end of POST|PATCH|DELETE request
+
+// options object is used to specify additional parameters for the request.
+    options = {
+        method:     
+        url:      
+        auth:      
+        headers:     
+        hostname:      
+        path:       
+        timeout:                and many more ...    
+    }
+
+Note:- before sending any data, make sure to stringify the data JSON.stringify
+Note:- before reading any data, make sure to parse the data using JSON.parse
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+

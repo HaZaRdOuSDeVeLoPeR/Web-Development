@@ -1,0 +1,5 @@
+// anchor tag is used to link one page to another
+// use 'target' attribute with value '_blank' to open the page in new tab
+
+// use iframe tag to embed one html page into another
+// use attributes like 'width', 'height' to set the frame size and 'src' to set the page location

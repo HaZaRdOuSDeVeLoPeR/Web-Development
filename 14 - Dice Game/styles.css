@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #920210;
+}
+.row, .col, .container-fluid{
+    margin: 0px;
+    padding: 0px;
+}
+
+.display-winner{
+    padding-top: 2%;
+    color: #3fbe92;
+    font-size : 6rem;
+    font-weight : 800;
+}
+
+.player-section{
+    font-size: 3.5rem;
+}
+
+.player-name{
+    padding-top: 10%;
+    color: #3fbe92;
+    padding-bottom: 6%;
+}
+
+.copyright{
+    padding-top: 6%;
+    color: white;
+}
+
+.dice-img1, .dice-img2{
+    padding: 0px;
+    animation: shuffle 2s linear;
+}
+
+@keyframes shuffle{
+    10%{transform: rotateZ(-100deg)}
+    20%{transform: rotateZ(300deg)}
+    30%{transform: rotateZ(-80deg)}
+    40%{transform: rotateZ(120deg)}
+    50%{transform: rotateZ(-50deg)}
+    60%{transform: rotateZ(100deg)}
+    70%{transform: rotateZ(-130deg)}
+    80%{transform: rotateZ(50deg)}
+    90%{transform: rotateZ(-500deg)}
+    100%{transform: rotateZ(60deg)}
+}

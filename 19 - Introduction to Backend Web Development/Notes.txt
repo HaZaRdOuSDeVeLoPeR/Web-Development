@@ -1,0 +1,27 @@
+// Backend consists of a server, database and application.
+
+
+// Analogy for understanding Backend:-
+Imagine a Restaurant
+--> The Sitting Area is Client-Application
+--> The Kitchen is the Server
+--> The Ingredients Store is the Database
+
+--> Server retrives data from database and server the client-application.
+
+
+Note :- There is no need for a kitchen (server) to server the client. It can be made in the sitting area(in front-end)
+        But it can be time-consuming and also less secure (all the logic used is exposed to the client)
+
+Client <----> Server <----> Database
+--> More secure
+--> More reliable
+--> More responsive
+
+
+Common technologies used for backend development are :- Ruby, PHP, JAVA, Node.js
+Common frameworks used are :-
+--> Ruby on Rails
+--> CakePHP for PHP
+--> Express.js for Node.js
+

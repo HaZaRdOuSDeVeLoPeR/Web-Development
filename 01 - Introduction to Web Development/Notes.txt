@@ -1,0 +1,11 @@
+// How Internet Actually Works ?
+- Browser sends request to ISP.
+- ISP relays message to DNS server for lookup.
+- DNS server sends back the IP Address of the desired Address.
+- The Browser then again sends the direct request to destination server requesting for resources.
+- The destination server sends back the requested resources.
+
+// How Websites Work ?
+HTML - Responsible for Structure of Websites
+CSS - Responsible for Design/Styling of Websites
+JS - Responsible for all the Dynamic Behaviour of Websites

@@ -1,0 +1,71 @@
+// favicon is the icon displayed on the tab of the website in web browser.
+--> Use favicon.cc to create a new favicon
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Box Model:-
+    (Actual Box)
+[Content -> Padding] -> Border -> Margin
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// For calculating box dimensions, content + 2*padding + 2*Border
+--> Padding doesn't apply to background attributes
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Box-Size calculation methods : (Use box-sizing attribute)
+1. border-box : The width and height specified is equivalent to content+padding+border
+2. content-box : (By default) The width and height specified is for content box only
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Display Properties (display attribute):
+1. Inline :- box is only as large as the content. 
+    Width of inline elements can't be changed. [Disadvantage]
+    Eg:- span, a etc
+
+2. Block :- box width is equal to the width of parent container by default.
+    Width can be changed but blocks other elements to occupy same line as itself. [Disadvantage]
+    Eg:- p, h1..h6, div, ol, ul, li, form etc
+
+3. Inline-Block :- If we want an element to be both resizable as well as to not block other elements to occupy the same line as itself, we use inline-block
+    Eg:- img
+
+4. None :- Deletes the element from the DOM. (Doen't reserve space for the element)
+    Note :- If we want to make the elements invisible only (reserve the space for the element), we use "visibility: hidden"
+
+Note :- the display property of any element can be changed according to user choice by using "display" attribute.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// CSS-Positioning (position attribute):
+1. static: by default
+
+2. relative: marking position as relative is defining its position relative to its old position (using left, right, top, bottom and z-index attribute)
+    Note: this only affects the position of current element selected without modifying the position of other elements.
+
+3. abosolute :- defines the position of the element relative to its first parent container whose position is marked as relative (or body element if none of the containers are marked as relative)
+    Note: this affects the flow(position) of other html elements and completely removes the placeholder of the object from its old position and shifts to new position 
+
+4. fixed :- defines the position relative to viewport. (Creates floating window)
+    Note: takes the element out of html flow (affects the positions of other elements)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// font-family attribute is used to change font style of text.
+--> We have 5 basic fonts :- serif, sans-serif, monospace, cursive and fantasy
+
+Note :- font-family uses fallback mechanism
+Eg :- font-family: font1, if_not_font1_then_font2, if_not_font1,2_then_font3, ... n fallback fonts;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// font-size can be static or dynamic(scalable)
+--> For static size, use px and for dynamic size, use rem, em and % (1rem = 100% = 16px)
+--> em is font-size defined relative to parent container
+--> rem is font-size defined relative to root element       [preffered over em]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// line-height property is used to define the space between consecutive lines of text.

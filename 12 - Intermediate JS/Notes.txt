@@ -1,0 +1,107 @@
+// Comparators in JS
+    --> All comparators are similar to C++ except equality and inequality
+
+    Loose Equality (==)     :- returns true if value of both operands are similar
+    Loose inequality (!=)   :- returns true if value of both operands are not similar
+
+    Strict Equality (===)   :- returns true if both value and datatype of both operands is identical
+    Strict Inequality (!==) :- return true if both valie and datatype of both operands are different
+
+
+// Math Object to perform Mathematical operations
+    1. Constants :- 
+        Math.E 
+        Math.PI 
+    
+    2. Functions :-
+        Math.round(x)
+        Math.ceil(x)
+        Math.floor(x)
+        Math.trunc(x) [Return integeral parameter]
+        Math.min(x, y, z, ..)       Math.max(x, y, z, ..)
+
+        Math.pow(x, y)
+        Math.sqrt(x)
+        Math.abs(x);
+        Math.sin(x_in_radians)      Math.cos(x_in_radians)      // returns a value between -1 and 1
+
+        Math.log(x)     [Return log x base e]
+        Math.log10(x)   [Return log x base 10]
+
+        Math.random()   Return a random real number in interval [0, 1)     // always less than 1
+
+        --> to get random number between in range [start, end]
+            rand = Math.random()        // in range [0,1)
+            rand *= (end-start+1)       // scale the range [0, end-start+1)
+            rand += start               // shift the range [start, end+1)
+            rand = Math.floor(rand)     // get the floor   [start, end]
+        
+
+// Arrays and its operations in JS
+    Syntax for declaration :-
+    let arr_name = [obj1, obj2, ..., objn]
+
+    --> Can be accessed using indexing operator (0-based indexing)
+    --> Arrays in JS are dynamic size
+    --> Can store heterogenous data
+
+    --> Iterating over arrays :-
+        1. Using index-based for-loop
+           Inside forEach(), we need to pass the function which does the operation needed for each element in the array
+
+        2. Using for-of loop.   [used to access values only]
+            Syntax :- for(const entry of array) {}
+
+        3. Using for-in loop.   [used to access keys, which can be then used to access values]
+            Syntax :- for(const key in array) {}
+            Note :- Invalid in sets (don't have keys)
+            
+        4. Using forEach() function. 
+
+    Array Operations :-
+
+    1. Length :- return the length/size of array using .length data member
+
+    2. Sorting :- 
+    sorts the array. By default, sorts in ascending order. 
+    Use Custom Comparator (by anonymous function) for custom sort.
+    --> Comparator should return >0 when swapping is needed.
+    --> Syntax :- array.sort(comparator_func)
+
+    3. Appending an element at end using push() method
+    --> Syntax :- arr_name.push(obj)
+
+    4. Removing an element at end using pop() method
+    5. Removing one element at front of array using shift() method
+
+    6. Appending an element at front of array using unshift() method
+    --> Syntax :- arr_name.unshift(obj)
+
+    7. Concatenating two or more arrays using concat() function
+    --> Syntax :- result = arr1.concat(arr2, arr3, ..)
+
+    Note :- concat() function never modifies the original array. 
+            It "always constructs a new array" and returns it.
+    
+    8. Converting the array into string using a user-defined seperator [join() method]
+    --> It is opposite of split() method in string
+    --> string.split(seperator) <==> array.join(seperator)
+    --> Syntax :- let myString = array.join(seperator)
+
+    Note :- join() function never modifies the original array. 
+            It "always constructs a new string" and returns it.
+
+    9. Extracting Subarray from the Array using slice() function [similar to slice in string]
+
+    10. Searching for an element using indexOf();
+        --> returns a valid index of "first occurent of the object" if it is present else -1 if absent
+        --> to find last occurence, use lastIndexOf() method instead of indexOf() method
+        --> we can also define the starting index from where to begin the Searching
+
+        --> Syntax :- let first_occurence = arr.indexOf("object", 0)        // start searching for "object" from index 0
+        --> Syntax :- let last_occurence = arr.lastIndexOf("object", -1)    // start searching for "object" from end of the array
+
+        Note :- if the requirement is only to know if the element is present or not then use includes() method
+
+    11. Reverse an array using reverse() function
+        --> Syntax :- arr_name.reverse()        // does the reverse in-place

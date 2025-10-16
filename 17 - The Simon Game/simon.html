@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="main-menu">
+        <h1>Main Menu</h1>
+        <button class="btn btn-lg btn-outline-dark new-game">New Game</button>
+        <button class="btn btn-lg btn-outline-dark continue disabled">Continue</button>
+        <button class="btn btn-lg btn-outline-dark highscore">Highscores</button>
+        <button class="btn btn-lg btn-outline-dark exit">Exit</button>
+    </div>
+    <div class="leaderboards">
+        <h1>Leaderboards</h1>
+        <table style="width: 80%; font-size: min(4vw, 4vh); text-align: center">
+            <tr>
+                <th style="padding-bottom: 5%;">Rank</th>
+                <th style="padding-bottom: 5%;">UserName</th>
+                <th style="padding-bottom: 5%;">HighScore</th>
+            </tr>
+        </table>
+    </div>
+    <div class="game-panel">
+        <h2 class="level">Press Any Key to Start</h2>
+        <div class="tiles">
+            <div class="red"><button>red</button></div>
+            <div class="blue"><button>blue</button></div>
+            <div class="green"><button>green</button></div>
+            <div class="yellow"><button>yellow</button></div>
+        </div>
+        <h2 class="lives">Lives:</h2>
+    </div>
+    <div class="game-over">
+        <h1>Game Over !</h1>
+        <button class="btn btn-lg btn-outline-dark menu">Main Menu</button>
+        <button class="btn btn-lg btn-outline-dark restart">Restart</button>
+        <button class="btn btn-lg btn-outline-dark exit">Exit</button>
+    </div>
+    <script src="./gamelogic.js"></script>
+    <script src="https://kit.fontawesome.com/69a6b7a191.js" crossorigin="anonymous"></script>
+</body>
+</html>

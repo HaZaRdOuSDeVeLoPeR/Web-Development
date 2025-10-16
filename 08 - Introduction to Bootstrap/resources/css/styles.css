@@ -1,0 +1,82 @@
+/* Global Section */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container-fluid, .row, .col, .col-12{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+}
+h1{
+    font-weight: 800;
+    font-size: 3rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+
+/* Navbar Section */
+.navbar{
+    font-family: "Ubuntu";
+}
+
+.navbar-brand{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.nav-link{
+    font-size: 1.25rem;
+}
+
+/* Title Section */
+.intro{
+    background-color: rgb(225, 62, 89);
+    overflow: hidden;
+}
+
+.intro h1{
+    margin-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 8%;
+    color: white;
+}
+
+.intro button{
+    width: 40%;
+}
+
+.title-image{
+    transform: rotateZ(25deg);
+    position: relative;
+    top: 8.5%;
+}
+
+/* Feature Section */
+.feature-list{
+    padding: 6% 9% 6% 9%;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+}
+
+.feature-list h3{
+    font-weight: bold;
+}
+
+.feature-list p{
+    font-weight:300;
+    color: gray;
+}
+
+.fa-solid{
+    color: rgba(225, 62, 89, 0.8);
+}

@@ -1,0 +1,39 @@
+// Shell is a user interface (CUI/GUI) which allows user to interact with kernel.
+// Bash Shell stands for Bourne Again Shell is a CLI for "Unix Like" system.
+
+// Why use a shell at all ?
+--> More Control over kernel (OS and Hardware)
+--> Easier and faster to perform operations (Eg:- copy, paste, make folder etc)
+
+// print current working directory using "pwd"
+
+// Listing items in the current directory using "ls"
+
+// navigating to a directory using "cd"
+--> cd ~            : Navigate to Root directory
+--> cd ..           : Navigate to previous directory
+--> cd Folder       : Navigate to current_directory/Folder/ 
+--> cd Directory    : Navigate to Directory
+
+// editing the current written command using keyboard shortcuts
+--> use arrow keys for the command history
+--> Ctrl + U : Clears the command
+--> Ctrl + A : Goes to the beginning of the command
+--> Ctrl + E : Goes to the end of the command
+
+// make a folder using "mkdir"
+--> mkdir Name    : make a folder called 'Name'
+
+// make a file inside a directory using "touch" command
+--> touch file.ext      : make a file called 'file.ext'
+
+// open a file using 'code' command inside VSCode
+--> code file.ext       : open the file 'file.ext' in VS code
+
+// delete a file inside current directory using "rm" command
+--> rm file.ext         : remove the file 'file.ext'
+--> rm -r folder_name   : remove the folder 'folder_name' and all its files recursively
+--> rm *                : remove everything inside cwd
+
+--> rm -f file.ext      : remove a file forcefully
+--> rm -rf folder_name  : remove a folder forcefully

@@ -1,0 +1,19 @@
+{
+  "name": "project-template",
+  "version": "1.0.0",
+  "description": "Making a example Project using external node modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "Heroes",
+    "Villains"
+  ],
+  "author": "Aditya",
+  "license": "ISC",
+  "dependencies": {
+    "superheroes": "^4.0.0",
+    "supervillains": "^4.0.0"
+  }
+}

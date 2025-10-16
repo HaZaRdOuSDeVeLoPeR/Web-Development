@@ -1,0 +1,75 @@
+// Carousel in Bootstrap (slideshow)
+--> Two types of carousel, manual and automatic (can create a combination of both)
+--> Base class is "carousel"
+
+--> 2 Kinds of transition :-
+    1. No transition    :- use "carousel" class only
+    2. "carousel slide" :- slides will change with slide animation
+    3. "carousel-fade"  :- slides will change with fade animation
+
+--> Autoplay controls :- we can set whether carousel will autoplay or not using "data-bs-ride" attribute
+    1. data-bs-ride = "false" :- slides will not change until user wants
+    2. data-bs-ride = "true"  :- slides will start to change after first user interaction
+    3. data-bs-ride = "carousel" :- slides will start playing automatically after webpage is loaded.
+
+    Note :- for autoplay, slide change interval is defined by "data-bs-interval" for each "carousel-item"
+    Note :- autoplay pauses automatically when mouse is hovered over a slide
+
+--> Each carousel slide must be enclosed in a container with class "carousel-item"
+    Note :- one of the slides must be enclosed within "active" class
+
+    Syntax :-
+    <carousel transition-style bata-bs-ride="autoplay_value">               (Base Container)
+        <carousel-inner>                                                    (Container containing all the carousel slides)
+            <carousel-item active></carousel-item> 
+            <carousel-item></carousel-item>                                 (Container for each slides)
+            .
+            .
+            <carousel-item></carousel-item>
+        </carousel-inner>
+        <prev-control-button></prev-control-button>                         (Prev and next control buttons)
+        <next-control button></next-control>
+    </carousel-style and autoplay>
+
+
+// Cards in Bootstrap :-
+--> Similar structure to html document (header-body-footer)
+--> base class is "card"
+--> sections :- card-header, card-body, card-footer
+
+    Syntax :-           (By default a block Element, use grid to make it responsive)
+    <card>
+        <card-header>
+            Header-Content 
+        </card-header>
+        <card-body>
+            Body-Content
+        </card-body>
+        <card-footer>
+            Footer-Content
+        </card-footer>
+    </card>
+
+
+// Z-Index Stacking Order
+--> Z-Index only works on an element if it is marked as position: {relative|absolute|fixed}
+--> By default, all the elements have z-index of 0
+--> if two or more elements having same z-index overlap, the stacking order is defined by the order in which they are defined in html skeleton.
+
+
+// Media Query (If-Else in CSS)
+Syntax:
+    @media <type> <feature>{
+        // CSS-Styling to apply if <type> <feature> returns true
+    }
+
+--> Commonly used <type> <feature> :-
+    1. print  :- returns true when the document is being printed
+    2. speech :- returns true when the document is being read by a narrator
+    3. (orientation: landscape) :- returns true when viewport is in landscape mode 
+    4. (min-width: 900px) :- returns true when the viewport has atleast a width of 900px
+       (max-width: 900px) :- retuens true when the viewport has atmost a width of 900px
+
+--> We can also create complex media query, using "and", "or" and "not" logical operator.
+
+

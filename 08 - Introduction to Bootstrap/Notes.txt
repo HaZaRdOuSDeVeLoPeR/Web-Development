@@ -1,0 +1,65 @@
+// Bootstrap can be seen as a library of front-end web designs.
+
+
+// Wireframing is low-fidelity representation/design of a website before starting to implement any website.
+--> Use balsamiq.cloud for Wireframing
+// Mock-Up is high-fidelity representation/design of a website.
+
+
+// for changing color use the classes:
+bg-dark, light, success, danger, primary, secondary, warning etc
+
+
+// positioning in bootstrap
+--> use classes "position-static", "position-relative", "position-absolute", "position-fixed" to modify the positioning of elements.
+
+
+// navbar in Bootstrap
+--> use "navbar" class for activating navbar bootstrap
+--> use "navbar-brand" to enclose brand name
+--> fixed-top/bottom, sticky-top/bottom : class used for positioning
+--> navbar-expand-{-sm|-md|-lg|-xl|-xxl} : class for responsive collapsing 
+    Eg :- navbar-expand-sm : {collapse navbar in small sized screens and so on ..}
+--> bg-dark : class for background colour
+--> navbar-dark : set colour theme
+
+Note:- Navbar Items should be enclosed inside a list and the list container should be marked with "navbar-nav" class.
+
+
+// margin and padding in bootstrap
+--> m for margin and p for padding
+--> t for top, b for bottom, s for left, e for right
+--> 6 different levels 0, 0.25, 0.5, 1, 1.5, 3 and auto
+
+Eg :-   ms-auto : margin from start(left) as auto
+        pt-5    : padding from top as 3*($spacer)
+
+
+// grid in bootstrap
+--> use class "row" to enclose one row in a grid
+
+--> Each Row has 12 cols by default in the bootstrap template, we can create a column of desired from
+--> Use class "col-fr_value" to enclose one cell in a grid
+    Eg :- col-4 (creates a cell with a third the size of row (i.e 4/12 = 1/3))
+
+--> Use the breakpoints {-sm|-md|-lg|-xl|-xxl} to make the columns responsive.
+    Eg :-   col-lg-4  (create a cell with a third the size of row in large screens)
+            col-md-6  (create a cell with half the size of row in medium size screens)    and so on ..
+
+    Note :- use col-{breakpoints}-auto to define the width of cell according to content size (be careful with the content size, can break the layout)
+
+
+// containers in bootstrap
+--> two types of responsive containers
+    1. container - always at the center of the screen and has breakpoints depending on viewport size
+    2. container-fluid - always at the center and occupies 100% width of parent container and adapts fluidly depending on viewport size
+
+
+// Buttons in bootstrap
+--> base class is "btn" to include in button elements
+--> two types of button :-
+    1. Solid color button with hover state :- use btn-{primary/secondary/dark/right/...}
+    2. Outline color button with fill hover state :- use btn-outline-{primary/secondary/dark/right/...}
+
+--> size customization :- use btn-{sm|md|lg}
+--> use disabled flag to disable the button

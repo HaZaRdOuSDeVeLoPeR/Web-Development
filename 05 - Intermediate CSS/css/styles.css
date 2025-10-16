@@ -1,0 +1,87 @@
+*{
+    padding:0px;            /* override defaults of all elements */
+    margin:0px;
+}
+
+body{
+    background-color: beige;
+    width: 100vw;
+    height: 150vh;
+}
+
+.info{
+    /* box can be displayed inline with resizing option available */
+    display: inline-block;
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+    background-image: url(../resources/mountain.png);
+    background-size: cover;
+}
+
+.info > h1{
+    /* box is only as large as the content, no resizing */
+    display: inline;
+}
+
+.cloud{
+    display: inline;
+}
+
+.cloud > img{
+    width: 200px;
+    height:100px;
+}
+
+.parent{
+    background-color: aqua;
+    position: relative;
+}
+
+.parent:hover{
+    .middle{
+        position: absolute;
+        left: 200px;
+        top:200px;
+    }
+}
+
+.top{
+    display: inline-block;
+    width:200px;
+    height:200px;
+    background-color: red;
+    margin: 10px 0px 0px 10px;
+}
+
+.top:hover{
+    /* now all positions are defined relative to old position */
+    position: relative;
+    top: 30px;           /* move 30 pixels down and 30 pixels right from top and left boundary */
+    left: 30px;
+    z-index: 1;
+}
+
+.middle{
+    display: inline-block;
+    width:200px;
+    height:200px;
+    background-color: yellow;
+    margin : 10px 0px 0px 10px;
+    z-index:2;
+
+}
+
+.bottom{
+    display: inline-block;
+    width:200px;
+    height:200px;
+    background-color: blue;
+    margin : 10px 0px 0px 10px;
+    position: relative;
+    z-index: 3;
+}
+
+.bottom:hover{
+    position: fixed;
+}

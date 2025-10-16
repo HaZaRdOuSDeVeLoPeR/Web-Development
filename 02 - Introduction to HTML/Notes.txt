@@ -1,0 +1,18 @@
+// Documentations to Folow :-
+1. MDN
+2. W3 Schools
+3. devdocs.io
+
+// Self-Closing Tags Like :- 
+    <br> 
+    <hr align, color, size, width>
+    <img>
+
+
+// two ways to emphasise <i> and <em>
+// two ways to bold <b> and <strong>
+
+// for anchor tag use tel, mailto, sms inside href to link telephone, email and sms
+
+// for image tag, changing only one of the dimesions keeps the aspect ratio locked. Can also set border
+// set use defined list type for both OL(i, I, a, 1 etc) and UL(circle, disc, square etc)
